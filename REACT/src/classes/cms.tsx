@@ -199,8 +199,9 @@ export class Cms {
           <div>
             {data.map((item: any, index: number) => {
               return (
-                <p key={index}>
-                  <div id={item.title} />
+                <div key={index}>
+                <div id={item.title} />
+                <p>
                   <b>{item.title}</b>
                   <br />
                   {item.text.map((text: string, textIndex: number) => {
@@ -216,6 +217,7 @@ export class Cms {
                   })}
                   <div className="divider" />
                 </p>
+                </div>
               );
             })}
           </div>

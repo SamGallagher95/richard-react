@@ -31,6 +31,9 @@ class Poems extends React.Component<IState> {
         loading: false
       });
     });
+    document.addEventListener("scroll", e => {
+      console.log(e);
+    })
   }
 
   public render() {
