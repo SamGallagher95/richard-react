@@ -1,0 +1,67 @@
+.column-content {
+  display: flex;
+  flex-direction: column;
+  width: 82%;
+  min-height: 100vh;
+  background-color: #d7c2b1;
+  font-family: "Merriweather";
+  margin-left: 18%;
+  opacity: 0;
+}
+
+.column-content.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.poems-wrapper {
+  width: 65%;
+  margin: 40px auto;
+}
+
+.poems-wrapper h1 {
+  padding: 0 25px 15px 0;
+  margin-bottom: 15px;
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  font-size: 2em;
+}
+
+b {
+  display: block;
+}
+
+.divider {
+  width: 40%;
+  margin: 10px 0;
+  border-bottom: 1px solid black;
+}
+
+.poems-nav {
+  width: 25%;
+  min-height: 100vh;
+  margin: 50px 25px;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+}
+
+.poems-nav a {
+  display: block;
+  margin: 10px 0;
+  color: black;
+}
+
+.row {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: transalte(0, -15px);
+  }
+  100% {
+    opacity: 1;
+    transform: transalte(0, 0);
+  }
+}

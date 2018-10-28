@@ -1,0 +1,95 @@
+@media screen and (min-width: 760px) {
+  .center {
+    display: flex;
+    padding-top: 25px;
+    flex-direction: row;
+  }
+
+  .content img {
+    height: 440px;
+    width: 350px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    animation: imgFadeIn ease 0.4s;
+    margin-bottom: 25px;
+  }
+  .content .imgQuotesContainer {
+    width: 350px;
+  }
+
+  .quotes {
+    animation: quotesFadeIn ease 0.4s;
+  }
+  .content .biography {
+    margin-left: 25px;
+    width: 60%;
+    animation: bioFadeIn ease 0.4s;
+  }
+
+  p {
+    margin-bottom: 25px;
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .content {
+    margin: 15px;
+    margin-top: 90px;
+  }
+  .content img {
+    max-width: 40%;
+    float: left;
+    margin: 0 15px 15px 0;
+  }
+  p {
+    margin-bottom: 15px;
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
+
+@keyframes imgFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-15px);
+  }
+  10% {
+    opacity: 0;
+    transform: translate(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes quotesFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-15px);
+  }
+  60% {
+    opacity: 0;
+    transform: translate(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes bioFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-15px);
+  }
+  40% {
+    opacity: 0;
+    transform: translate(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}

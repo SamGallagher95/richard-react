@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #d7c2b1;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Oswald");

@@ -1,0 +1,71 @@
+.App {
+  display: flex;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 13px;
+}
+
+@media screen and (min-width: 760px) {
+  .App {
+    flex-direction: row;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 82%;
+    min-height: 100vh;
+    background-color: #d7c2b1;
+    justify-content: center;
+    font-family: "Merriweather";
+    margin-left: 18%;
+    opacity: 0;
+    transition: 0.2s opacity ease;
+  }
+
+  .content.fade-in {
+    opacity: 1;
+  }
+
+  .content .center {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+  }
+
+  .content h1.title {
+    display: inline-block;
+    margin: 0 0 25px 0;
+    padding: 0 150px 25px 0px;
+    border-bottom: 1px solid #000;
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .App {
+    flex-direction: column;
+  }
+  h1.title {
+    margin: 0 0 15px 0;
+    padding: 0 5px 15px 0;
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    font-size: 2em;
+  }
+}
+
+.poem-text {
+  margin: 0;
+}
+
+.column {
+  display: flex;
+  flex-direction: column !important;
+}
