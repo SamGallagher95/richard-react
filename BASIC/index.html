@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>Richard Hedderman</title>
+    <!-- Third party libraries -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Fonts and Stylesheets-->
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="flex">
+            <div id="sidebar" class="sidebar">
+                <h1 class="name">Richard Hedderman</h1>
+                <h2>Poet, Essayist, Author, Educator</h2>
+                <div class="divider"></div>
+                <div class="links">
+                    <div class="link">
+                        <a class="active" href="index.html">Biography</a>
+                    </div>
+                    <div class="link">
+                        <a href="discovery.html">Discovery of Heaven</a>
+                    </div>
+                    <div class="link">
+                        <a href="poems.html">Poems</a>
+                    </div>
+                    <div class="link">
+                        <a href="prose.html">Prose</a>
+                    </div>
+                    <div class="link">
+                        <a href="news.html">News</a>
+                    </div>
+                    <div class="link">
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="quote">
+
+                </div>
+            </div>
+            <div id="content" class="content ready">
+                <div class="home">
+                    <div class="flex-wrapper">
+                        <div class="left">
+                            <div class="img-container">
+                                <img class="richard" src="./imgs/richard.jpg" alt="Richard Hedderman">
+                            </div>
+                            <div class="quotes">
+                                <h2 class="title">Quotes</h2>
+                                <div id="quotes"></div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <h1 class="title">Biography</h1>
+                            <div id="bio"></div>
+                        </div>
+                    </div>
+                    <div class="achievements">
+                        <h1 class="title">Achievements</h1>
+                        <div id="achievements"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Event Emitter -->
+    <script src="./js/event-emitter.js"></script>
+    <!-- CMS -->
+    <script src="./js/cms.js"></script>
+    <!-- Index -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

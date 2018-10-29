@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Richard Hedderman</title>
+    <!-- Third party libraries -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Fonts and Stylesheets-->
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="flex">
+            <div id="sidebar" class="sidebar">
+                <h1 class="name">Richard Hedderman</h1>
+                <h2>Poet, Essayist, Author, Educator</h2>
+                <div class="divider"></div>
+                <div class="links">
+                    <div class="link">
+                        <a href="index.html">Biography</a>
+                    </div>
+                    <div class="link">
+                        <a href="discovery.html">Discovery of Heaven</a>
+                    </div>
+                    <div class="link">
+                        <a class="active" href="poems.html">Poems</a>
+                    </div>
+                    <div class="link">
+                        <a href="prose.html">Prose</a>
+                    </div>
+                    <div class="link">
+                        <a href="news.html">News</a>
+                    </div>
+                    <div class="link">
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="quote">
+
+                </div>
+            </div>
+            <div id="content" class="content ready">
+                <div id="sideNav" class="side-nav">
+                    <b>Quick Links</b>
+                    <div id="poemTitles"></div>
+                </div>
+                <div class="poems">
+                    <div class="text">
+                        <h1 class="title">Poems</h1>
+                        <div id="poems"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Event Emitter -->
+    <script src="./js/event-emitter.js"></script>
+    <!-- CMS -->
+    <script src="./js/cms.js"></script>
+    <!-- Index -->
+    <script src="./js/poems.js"></script>
+</body>
+
+</html>
