@@ -15,18 +15,18 @@ window.cms = new EventEmitter();
 function cms() {
   // Get current page
   const siteId = "richard";
-  let page = window.location.pathname;
-
+  let page = window.location.pathname.slice(4, window.location.pathname.length);
   console.log(page);
 
-  if (page === "/" || page === "/index.html") {
+  if (page === "" || page === "/index.html") {
     page = "home";
   }
 
   if (page.includes(".html")) {
       page = page.split(".")[0];
-      page = page.slice(1, page.length);
   }
+  
+  console.log(page);
 
   //   Get the firestore data
   firebase
