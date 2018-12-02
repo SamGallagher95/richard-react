@@ -1,39 +1,19 @@
-$(document).ready(load);
+var state = false;
 
 function load() {
-  console.log(window.cms);
-
-  window.cms.on("ready", data => main(data));
+  console.log(document.getElementById("sidebar"));
+  if (document.getElementById("sidebar")) {
+    console.log("load");
+    return main();
+  } else {
+    console.log("try again");
+    return setTimeout(load, 50);
+  }
 }
 
-function main(data) {
-  console.log("FROM CMS", data);
-
-  // Poems
-  let poems = data.poems;
-  poems = poems.map(item => {
-    let string = `<div class='poem'><a name='${item.title}'></a><h3 class='title'>${item.title}</h3>`;
-    string += item.text
-      .map(text => {
-        if (text === "break") {
-          return `<br />`;
-        } else {
-          return `<p>${text}</p>`;
-        }
-      })
-      .join("\n");
-    string += "</div>";
-    return string;
-  });
-  document.getElementById("poems").innerHTML = poems.join("\n");
-
-  // Poem Titles
-  let poemTitles = data.poems;
-  poemTitles = poemTitles.map(item => {
-    return `<a href='#${item.title}'>${item.title}</a>`;
-  });
-  document.getElementById("poemTitles").innerHTML = poemTitles.join("\n");
-
+function main() {
+  console.log("main");
+  state = true;
   // Poem sidenav positioning
   const left = document.getElementById("sidebar").offsetWidth;
   document.getElementById("sideNav").style.left = left + "px";
@@ -69,7 +49,7 @@ function main(data) {
   const event = new Event("mouseleave");
   document.getElementById("sideNav").dispatchEvent(event);
 
-  // Ready content
-  document.getElementById("sidebar").classList.add("ready");
   document.getElementById("content").classList.add("ready");
 }
+
+$(document).ready(load);

@@ -5,7 +5,6 @@ function main() {
   // Get all of the links
   const links = document.querySelectorAll("#sidebar a");
   links.forEach(link => {
-    console.log(link.getAttribute("href"));
     if (activePage.includes(link.getAttribute("href"))) {
       link.classList.add("active");
     }
